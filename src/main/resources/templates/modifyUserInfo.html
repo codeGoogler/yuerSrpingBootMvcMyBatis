@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>根据id查询用户</title>
+</head>
+<body>
+	<div
+		style="height: 145px; width: 100%; background: #75A741; text-align: center; line-height: 145px"
+		align="center">根据id查询用户</div>
+		
+	<form th:action="@{/showUser/editUserInfo}" method="post" style="width:50%;background:#ff1234;line-height:150px;height:150px">
+		<input type="hidden" name="id" th:field="${user.id}"/> 
+		用户名：<input type="text" name="name" th:field="${user.name}"/> <br> 
+		年 龄：<input type="text"name="age" th:field="${user.age}"/> <br> 
+		用户名：<input type="submit" value="修改" /> <br>
+	
+	</form>
+</body>
+</html>

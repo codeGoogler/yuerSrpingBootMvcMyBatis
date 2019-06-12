@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>查询所有的用户</title>
+</head>
+<body>
+		<div style="height:145px;width:100%; background:#75A741;text-align:center;line-height:145px" align="center">查询所有的用户</div>
+		<table  style=" width:50%; background:green;border:solid 1px red;margin-top:20px"align="center">
+			<tr>
+				<td>编号</td>
+				<td>姓名</td>
+				<td>年龄</td>
+			</tr>
+			<tr th:each="user:${list}">
+				<td th:text="${user.id}"></td>
+				<td th:text="${user.name}"></td>
+				<td th:text="${user.age}"></td>
+				<td ><a th:href="@{/showUser/selectOneUserById(id=${user.id})}">修改用户信息</a></td>
+				<td ><a th:href="@{/showUser/deleteUserInfoById(id=${user.id})}">删除该用户</a></td>
+			</tr>
+		</table>
+		<span>th:each="user:${list}</span>
+</body>
+</html>
