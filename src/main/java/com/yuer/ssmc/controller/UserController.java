@@ -14,7 +14,12 @@ import com.yuer.ssmc.service.UserService;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-
+/**
+ * 类功能描述：</br>
+ * 控制器
+ * @author 于亚豪
+ * @version 1.0 </p> 修改时间：</br> 修改备注：</br>
+ */
 @Controller
 @RequestMapping("/showUser")
 public class UserController {
@@ -109,4 +114,13 @@ public class UserController {
 		return "success";
 	}
 	
+	/**
+	 * 请求用户个人主页
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("/queryUserInfo")
+	public String queryUserInfo(Model model){
+		return "userHomePage";
+	}
 }

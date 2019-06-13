@@ -2,6 +2,12 @@ package com.yuer.ssmc.pojo;
 
 import java.io.Serializable;
 
+/**
+ * 类功能描述：</br>
+ * 用户信息类
+ * @author 于亚豪
+ * @version 1.0 </p> 修改时间：</br> 修改备注：</br>
+ */
 public class User implements Serializable {
 	
 	private int id;

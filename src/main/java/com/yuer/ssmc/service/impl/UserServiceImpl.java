@@ -1,6 +1,7 @@
 package com.yuer.ssmc.service.impl;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import org.attoparser.util.TextUtil;
@@ -13,7 +14,12 @@ import com.mysql.jdbc.StringUtils;
 import com.yuer.ssmc.mapper.UserMapper;
 import com.yuer.ssmc.pojo.User;
 import com.yuer.ssmc.service.UserService;
-
+/**
+ * 类功能描述：</br>
+ * 业务逻辑层
+ * @author 于亚豪
+ * @version 1.0 </p> 修改时间：</br> 修改备注：</br>
+ */
 @Service
 @Transactional
 public class UserServiceImpl implements UserService {
