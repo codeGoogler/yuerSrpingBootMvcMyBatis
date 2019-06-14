@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body align="center" width="100%" height="100%">
+	<form th:action="@{/showAdmin/saveAdminOk}" method="post" style="width:50%;height:150px;background:#f12345F" align ="center">
+		姓        名：<input type="text" name="name"  /><font th:errors="${kklt.name}" color="red"></font></br></br>
+		密        码：<input type="password" name="password"/></br><font th:errors="${kklt.password}" color="red"></font></br></br>
+		年        龄：<input type="text" name="age"/><font th:errors="${kklt.age}"  color="red"></font></br></br>
+	           用户邮箱：<input type="text" name="email"/><font th:errors="${kklt.email}"  color="red"></font></br></br>
+		<input type="submit" value="ok"/></br>
+	
+	
+	</form>
+</body>
+</html>

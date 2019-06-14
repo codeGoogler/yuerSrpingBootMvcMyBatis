@@ -29,16 +29,22 @@ public class UserController {
 	private UserService service;
 
 	/**
-	 * 页面的跳转
+	 * 
+	 * 如果想为传递的对象更改名称，可以使用@ModelAttribute("aa")这表示当前传递的对象的key为aa。
+	 * 那么我们在页面中获取该对象的key也需要修改为aa
+	 * @param users
+	 * @return
 	 */
 	@RequestMapping("/{page}")
 	public String showPage(@PathVariable String  page){
 
 		return page;
 	}
+
 	/**
-	 * 向表中添加用户
-	 * @return
+	 * 完成用户添加
+	 *@Valid 开启对Users对象的数据校验
+	 *BindingResult:封装了校验的结果
 	 */
 	@ResponseBody
 	@RequestMapping("/addUser")
