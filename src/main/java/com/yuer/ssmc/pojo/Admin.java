@@ -15,12 +15,12 @@ public class Admin implements Serializable{
 	
 	@NotBlank(message="密码不能为空") //姓名的非空校验
 	private String password;
-//	
-//	@NotNull(message="年龄不能为空")  
-	@Min(value=15)
+	
+	@NotNull(message="年龄不能为空")  
+	@Min(value=15,message="年龄最少不能小于5岁")
 	private int  age;
 	
-	@NotBlank(message="email不能为空")  
+	@NotBlank(message="email不能为空")
 	@Email(message="email 输入的不是一个合格的字符串，请检车看卡")
 	private String  email;
 
@@ -59,7 +59,4 @@ public class Admin implements Serializable{
 	public Admin() {
 		super();
 	}
-	
-	
-	 
 }

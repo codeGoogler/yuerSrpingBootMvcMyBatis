@@ -54,6 +54,31 @@
 			<version>2.4</version>
 			<classifier>jdk15</classifier>
 		</dependency>
+			<!-- 添加unit的测试环境的jar包 -->
+		<dependency> 
+			<groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-starter-test</artifactId> 
+		</dependency>
+			<!-- SpringBoot热部署工具：devtools -->	
+		<dependency>
+			<groupId>org.springframework.boot</groupId> 
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
 	</dependencies>
-
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>org.springframework</groupId>
+						<artifactId>springloaded</artifactId>
+						<version>1.2.5.RELEASE</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+		</plugins>
+	</build>
 </project>

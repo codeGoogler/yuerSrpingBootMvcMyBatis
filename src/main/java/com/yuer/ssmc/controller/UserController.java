@@ -96,6 +96,7 @@ public class UserController {
 		List<User> list = null;
 		list = this.service.queryUserAllList();
 		model.addAttribute("list", list);
+		System.out.println("执行方法------------------");
 		return "queryAllList" ;
 	}
 	
